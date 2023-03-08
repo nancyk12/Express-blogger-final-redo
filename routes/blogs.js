@@ -15,6 +15,25 @@ router.get("/all", async function(req, res) {
     res.json({ blogs: getAllBlogs });
 });
 
+//get-one/ (GET): returns one blog post
+router.get("/get-one", async function(req, res){
+    const getOnePost = await db()
+    .collection("sample_blogs")
+    .findOne({
+        id: {
+            $exists: true,
+        },
+    });
+    console.log(getOnePost);
+
+    res.json({
+        success: true,
+        post: getOnePost,
+    });
+});
+
+
+//create-one/ (POST): creates one blog post
 router.post("/create-one", async function(req, res) {
     const {title, text, author, categories} = req.body
     const newData = {
