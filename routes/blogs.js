@@ -33,14 +33,14 @@ router.get("/get-one", async function(req, res){
 });
 
 ///get-one/:author (GET): returns one blog post given an id
-//in Postman, These are the names I entered "Ronald Barrows", "Paula Boyer", "Brandi Feil", and "Kelly Barton".
+//in Postman, These are the names I entered "Ronald Barrows", "Paula Boyer", "Brandi Feil", "Dominic Doyle", and "Ginny Gu".
 router.get("/get-one/:author", async function(req, res){
     const getAuthor = await db()
     .collection("sample_blogs")
     .find({author: req.params.author})
     .toArray(function(err, result){
         if (err){
-            res.status(400).send("Please try again.");
+            res.status(400).send("Please enter another author's name.");
         } else {
             res.json(result);
         }
