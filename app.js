@@ -8,8 +8,8 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 //connects our applications to mongodb atlas
-// const { mongoConnect } = require("./mongo");
-// mongoConnect();
+// const { mongooseConnect } = require("./mongoose.js");
+// mongooseConnect();
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
