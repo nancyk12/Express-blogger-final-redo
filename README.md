@@ -17,3 +17,10 @@ HINT: use find().sort()
 
 /delete-multi/ (GET): get multiple results
 HINT: use deleteMany()
+
+Stops for Mongoose Branch
+1. make a nwe branch: git checkout -b mongoose
+2. install mongoose: npm install mongoose
+3. comment out // const { mongoConnect } = require("./mongo");
+// mongoConnect();  in app.js
+4. 

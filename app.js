@@ -3,11 +3,13 @@ const express = require("express");
 const path = require("path");
 const cookieParser = require("cookie-parser");
 const logger = require("morgan");
+const mongoose = require("mongoose");
 // makes out .env file available to be used in the whole application
 require("dotenv").config();
+
 //connects our applications to mongodb atlas
-const { mongoConnect } = require("./mongo");
-mongoConnect();
+// const { mongoConnect } = require("./mongo");
+// mongoConnect();
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
