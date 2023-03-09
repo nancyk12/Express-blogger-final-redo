@@ -8,12 +8,12 @@ const mongoose = require("mongoose");
 require("dotenv").config();
 
 //connects our applications to mongodb atlas
-// const { mongooseConnect } = require("./mongoose.js");
-// mongooseConnect();
+const { mongooseConnect } = require("./mongoose.js");
+mongooseConnect();
 
 const indexRouter = require("./routes/index");
 const usersRouter = require("./routes/users");
-const blogsRouter = require("./routes/blogs");
+//const blogsRouter = require("./routes/blogs");
 
 const app = express();
 
@@ -29,7 +29,7 @@ app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
-app.use("/blogs", blogsRouter );
+//app.use("/blogs", blogsRouter );
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
