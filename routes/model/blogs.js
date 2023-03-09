@@ -6,6 +6,7 @@ const {v4: uuidv4} = require("uuid");
 const blogSchema = new mongoose.Schema({
     title: String,
     text: String,
+    year: Number,
     author: String,
     categories: [String],
     id: {type: String, default: uuidv4()},

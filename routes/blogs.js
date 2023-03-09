@@ -1,3 +1,21 @@
+const { v4: uuidv4 } = require("uuid");
+const express = require("express");
+const router = express.Router();
+
+
+const blogsController = require('../controllers/blogsController');
+
+//CRUD OPERATIONS 
+router.get('/all',blogsController.getAllBlogs);
+router.post("/create-one", blogsController.createOneBlog);
+router.get("/get-one/:id", blogsController.getOneBlog);
+router.put("/update-one/:id", blogsController.updateOneBlog);
+router.delete("/delete-one/:id", blogsController.deleteOneBlog);
+
+module.exports = router;
+
+//My code (from MongoDB, it's still a work in progress)
+
 // const express = require("express");
 // const router = express.Router();
 // // {} destructuring of the object, grabbing db and making its own variable
