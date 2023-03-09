@@ -16,4 +16,6 @@ router.get('/', async function(req, res) {
   res.render('index', { title: 'Express Blogger Mongoose' });
 });
 
+router.post
+
 module.exports = router;
